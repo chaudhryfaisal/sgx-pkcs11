@@ -66,7 +66,7 @@ App_Cpp_Flags := $(App_C_Flags) -std=c++11 -fpermissive
 App_Link_Flags := $(SGX_COMMON_CFLAGS) -L$(SGX_LIBRARY_PATH) \
     -L$(OPENSSL_PATH)/lib -L$(SGX_SSL_LIB) \
     -Wl,--start-group -lcrypto -lssl -ldl -Wl,--end-group \
-    -lsgx_usgxssl -lsgx_uae_service \
+    -lsgx_usgxssl \
     -l$(Urts_Library_Name) -lpthread 
 
 ifneq ($(SGX_MODE), HW)
